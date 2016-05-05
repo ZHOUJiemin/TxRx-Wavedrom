@@ -1,0 +1,26 @@
+{signal: [
+  {name: 's_clk', 			wave:'p...............'},
+  {},
+  ['Sequencer',
+  {name: 'state',			wave:'=..=....=.......', data:['S_LOAD','S_PROC','S_RDY']},
+  {name: 'proc',			wave:'0..1............'},
+  {name: 'clear',			wave:'0...............'},
+  {name: 'proc_done',		wave:'0......1........'},
+  ],
+  {},
+  ['Avrg Proc',
+  {name: 'y_shift',			wave:'0...1...........'},
+  {name: 'x_shift',			wave:'0......1........'},
+  {name: 'add_cnt',			wave:'=....==.........', data:['0','1','2']}
+  ],
+  {},
+  {wave:'x...3333x.......', data:['>>','+','+','>>'],phase:0.5},
+  ['Buffer',
+  {name: 'buf[0]',			wave:'=...====........', data:['']},
+  {name: '......'},
+  {name: 'buf[63]',			wave:'=...====........'},
+  {name: 'buf[64]',			wave:'=...=..=........'},
+  {name: '......'},
+  {name: 'buf[127]',		wave:'=...=..=........'},
+  ]
+]}
