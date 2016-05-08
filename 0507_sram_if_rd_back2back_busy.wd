@@ -1,0 +1,36 @@
+{signal: [
+  {name: 's_clk', 				wave:'0p..............'},
+  {},
+  ['output',
+  {name: 'pack_sram_valid',		wave:'0.......1.......'},
+  {name: 'pack_sram_busy',		wave:'1...0....1010...'},
+  {name: 'pack_sram_data',		wave:'x.......==.=.===', data:['D0','D1','D2','D3','D4','D5','D6','D7','D8','D9']},
+  {name: 'sram_rdcnt', 			wave:'=....=====.=.===', data:['0','1','2','3','4','5','6','7','8','9','10']}
+  ],
+  {},
+  ['sram',
+  {name: 'cs0',					wave:'0....1....0101..'},
+  {name: 'we0',					wave:'1...............'},
+  {name: 'addr0',				wave:'=.....=====.=.==', data:['0','1','2','3','4','5','6','7','8','9']},
+  {name: 'dout',				wave:'x......=====.=.=', data:['D0','D1','D2','D3','D4','D5','D6','D7']},
+  ],
+  {},
+  ['buf_in',
+  {name: 'busy_last_1_cycle',	wave:'0.........1010..'},
+  {name: 'buf_in_valid',		wave:'0......1....0101'},
+  {name: 'buf_in_sel',			wave:'0........1.0....'}
+  ],
+  {},
+  ['buf_out',
+  {name: 'buf_out_cnt',			wave:'=............==.', data:['0','1','0']},
+  {name: 'buf_out_sel',			wave:'0..........1..0.'}
+  ],
+  {},
+  ['buffer',
+  {name: 'buf0_filled',			wave:'0...........1.0.'},
+  {name: 'dout_ff0',			wave:'x.......==..=..=', data:['D0','D1','D4','D5']},
+  {name: 'buf1_buf2_filled',	wave:'0.........1...0.'},  
+  {name: 'dout_ff1',			wave:'x.........==....', data:['D2','D3','D4']},
+  {name: 'dout_ff2',			wave:'x..........=.=..', data:['D2','D3']},
+  ]
+]}
